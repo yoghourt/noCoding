@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css"/>
+		<title>图片、代码自助生成</title>
+	</head>
+	<body>
+		<div class="page">
+			<div class="page-header">
+				<div class="content-area">
+					<h1>图片、代码自助生成</h1>
+				</div>
+			</div>
+			<div class="page-body">
+				<div class="content-area">
+					<div class="toolbar">
+						<button id="open-box-dialog" class="btn" title="添加画布"><i class="icon add-icon"></i>新建</button>
+						<button id="open-text-dialog"class="btn" title="添加文字"><i class="icon text-icon"></i>文字</button>
+						<button id="open-img-dialog" class="btn" title="添加图片"><i class="icon pic-icon"></i>图片</button>
+						<button id="open-qrcode-dialog" class="btn" title="添加二维码"><i class="icon qrcode-icon"></i>二维码</button>
+					</div>
+					<div id="box-container" class="box-container"></div>
+				</div>
+				
+			</div>
+			<div class="page-footer">
+				<div class="content-area">
+					<div class="toolbar">
+						<button id="export-img-btn" class="btn">导出图片</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--容器创建弹窗-->
+		<div id="box-dialog" class="dialog">
+			<div class="dialog-container">
+				<div class="dialog-header">
+					<h1>创建容器</h1>
+				</div>
+				<div class="dialog-body">
+					<div class="size-item">
+						<input type="radio" name="size" value="i4"/><label for="">Apple iPhone 4 (320 x 480)</label>
+					</div>
+					<div class="size-item">
+						<input type="radio" name="size" value="i5" /><label for="">Apple iPhone 5 (320 x 568)</label>
+					</div>
+					<div class="size-item">
+						<input type="radio" name="size" value="i6" /><label for="">Apple iPhone 6 (375 x 627)</label>
+					</div>
+					<div class="size-item">
+						<input type="radio" name="size" value="i6+" /><label for="">Apple iPhone 6 Plus (414 x 736)</label>
+					</div>
+					<div class="size-item">
+						<input type="radio" name="size" value="cos" /><label for="">自定义</label>
+						<div class="size-input-container">
+							<label for="">宽</label><input type="text" name="box_w" id="" value=""/>
+							<label for="">高</label><input type="text" name="box_h" id="" value=""/>
+						</div>
+					</div>
+				</div>
+				<div class="dialog-footer">
+					<button id="create-box-btn" class="btn">创建</button>
+				</div>
+			</div>
+		</div>
+		<!--容器创建弹窗-->
+		<!--添加文字弹窗-->
+		<div id="text-dialog" class="dialog">
+			<div class="dialog-container">
+				<div class="dialog-header">
+					<h1>添加文字</h1>
+				</div>
+				<div class="dialog-body">
+					<div class="size-item">
+						<label for="">文本</label><input type="text" name="text" value=""/>
+					</div>
+					<div class="size-item">
+						<label for="">字号</label><input type="text" name="font-size" value=""/>
+					</div>
+					<div class="size-item">
+						<label for="">字体</label><input type="text" name="font-family" value=""/>
+					</div>
+					<div class="size-item">
+						<label for="">颜色</label><input type="text" name="color" value=""/>
+					</div>
+				</div>
+				<div class="dialog-footer">
+					<button id="create-text-btn" class="btn">添加</button>
+				</div>
+			</div>
+		</div>
+		<!--添加文字弹窗-->
+		<!--添加图片弹窗-->
+		<div id="img-dialog" class="dialog">
+			<div class="dialog-container">
+				<div class="dialog-header">
+					<h1>添加图片</h1>
+				</div>
+				<div class="dialog-body">
+					<div class="size-item">
+						<input id="img-file-input" type="file" class="btn"/>
+					</div>
+					<div class="img-preview-container">
+						<div class="toolbar">
+							<button id="img-crop-btn" class="btn">裁剪</button>
+						</div>
+						<div class="img-container">
+							<div class="img-origin">
+								<img id="img-target" width="600"/>
+							</div>
+							<div class="img-preview">
+								<img id="img-preview"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dialog-footer">
+					<button id="create-img-btn" class="btn">添加</button>
+				</div>
+			</div>
+		</div>
+		<!--添加图片弹窗-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/html2canvas.min.js"></script>
+		<script src="js/drag.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

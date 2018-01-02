@@ -1,0 +1,15 @@
+{
+  "name": "say_no_to_coding",
+  "version": "1.0.0",
+  "description": "A tool that auto export img or html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chen",
+  "license": "ISC",
+  "dependencies": {
+    "html2canvas": "^1.0.0-alpha.5",
+    "jcrop": "^0.0.1"
+  }
+}
